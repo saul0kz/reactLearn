@@ -7,7 +7,7 @@ class App extends Component {
     super();
     this.state = {
       lista: [
-        
+
       ]
     };
   }
@@ -26,7 +26,7 @@ class App extends Component {
 
   async getAutores() {
     try {
-      const resp = fetch('http://cdc-react.herokuapp.com/api/autores', {})
+      const resp = await fetch('http://cdc-react.herokuapp.com/api/autores', {})
         .then(response => response.json())
         .then(data => {
           console.log(data)
